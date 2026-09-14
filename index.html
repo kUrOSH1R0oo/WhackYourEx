@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASHFALL: Signal Zero — Official Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- top nav -->
+  <header id="site-header">
+    <nav class="navbar">
+      <a href="#top" class="logo">ASHFALL</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#top" class="nav-link" data-section="top">Home</a></li>
+        <li><a href="#features" class="nav-link" data-section="features">Features</a></li>
+        <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- hero -->
+    <section id="top" class="hero">
+      <canvas id="signal-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="eyebrow-plain">A solo exploration game</p>
+        <h1>ASHFALL: Signal Zero</h1>
+        <p class="pitch">
+          Kessa, a dying moon, has gone quiet — except for one signal that
+          shouldn't exist. Climb its cracked highlands, tune your relic to
+          the frequency of the dead, and find out who is still calling home.
+        </p>
+        <div class="hero-actions">
+          <button id="play-now" class="btn-primary">Play Now</button>
+          <a href="#features" class="btn-ghost">See what's inside</a>
+        </div>
+        <p id="play-status" class="play-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- features -->
+    <section id="features" class="features">
+      <h2>What you'll actually be doing</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card--wide">
+          <h3>Tune the relic, read the moon</h3>
+          <p>
+            Your signal relic is the only tool you carry. Rotate its three
+            rings to isolate a frequency, and the terrain around you
+            responds — hidden paths hum, broken machines flicker awake,
+            and the moon's old wounds glow through the rock.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Survive the cold hours</h3>
+          <p>Kessa's nights drop fast. Shelter, ration warmth, and choose which climbs are worth the risk before dark.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Four regions, one story</h3>
+          <p>The Glassfields, the Hollow Spires, the Undertide, and the Ashfall crater itself — each rewrites what you thought the signal meant.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>A companion who remembers</h3>
+          <p>Ren, a scavenger drone, keeps a log of every choice you make and will bring it up later — sometimes kindly, sometimes not.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>No combat, no health bar</h3>
+          <p>Ashfall is built around reading, listening, and deciding. Tension comes from what you might miss, not what might kill you.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section id="gallery" class="gallery">
+      <h2>Concept art from the studio</h2>
+      <p class="gallery-intro">Early renders from Kessa's surface, built while we were still deciding what the signal sounded like.</p>
+
+      <div class="gallery-grid">
+        <button class="gallery-item" data-caption="The cracked highlands of Kessa, lit by a fissure of unknown origin.">
+          <img src="images/moonscape.svg" alt="Illustration of a dark, cracked alien moonscape with a glowing teal fissure and two moons overhead.">
+        </button>
+        <button class="gallery-item" data-caption="The Wanderer, mid-climb, holding the signal relic aloft to catch a reading.">
+          <img src="images/wanderer.svg" alt="Silhouette illustration of a hooded explorer on rocky ground, holding a glowing signal relic above their head.">
+        </button>
+        <button class="gallery-item" data-caption="The signal relic itself — three rings, one core, and no manual.">
+          <img src="images/relic.svg" alt="Close-up illustration of an ornate alien relic made of concentric rings and glowing crystal shards.">
+        </button>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="about">
+      <div class="about-text">
+        <h2>Why we're building Ashfall</h2>
+        <p>
+          We kept making exploration games where the reward for curiosity
+          was a bigger fight. Ashfall started as a question: what if the
+          reward was just understanding something a little better than you
+          did an hour ago?
+        </p>
+        <p>
+          There is combat-free, so all of the game's tension is spent on
+          pacing, sound, and the slow reveal of Kessa's last transmission.
+          It's a small game. We'd rather it be sharp than long.
+        </p>
+
+        <h3>What's in the current build</h3>
+        <ul class="mode-list">
+          <li><strong>Story Mode</strong> — the full signal, start to end, roughly 4–6 hours.</li>
+          <li><strong>Wander Mode</strong> — no story triggers, just Kessa to explore at your own pace.</li>
+          <li><strong>Archive Mode</strong> — replay any decoded transmission you've already found.</li>
+          <li><strong>Photo Mode</strong> — pause anywhere and frame a shot of the moon.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- gallery popup, filled in by script.js -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close image">&times;</button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image">&lsaquo;</button>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image">&rsaquo;</button>
+  </div>
+
+  <!-- footer -->
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="logo">ASHFALL</p>
+        <p>Made by a seven-person team who really like moons.</p>
+      </div>
+
+      <div class="footer-credits">
+        <h4>Developer credits</h4>
+        <p>Design &amp; writing: Martina D., Alliah N. · Systems: Ivan D., Kobe B., Cyjay D., Shawn B., Steven P.</p>
+      </div>
+
+      <div class="footer-community">
+        <h4>Community</h4>
+        <ul class="footer-links">
+          <li><a href="#top">Discord</a></li>
+          <li><a href="#top">Bluesky</a></li>
+          <li><a href="#top">Devlog</a></li>
+          <li><a href="#top">Press kit</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Fried Tempura Game Studio. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

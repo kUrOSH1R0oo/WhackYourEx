@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Cracked horizon of the moon Kessa</title>
+  <desc id="d1">An original illustration of a dark alien moonscape with jagged terrain, a glowing fissure, and two moons in the sky.</desc>
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0E14"/>
+      <stop offset="65%" stop-color="#121821"/>
+      <stop offset="100%" stop-color="#1B2430"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CE0B3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4CE0B3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky1)"/>
+  <circle cx="650" cy="90" r="34" fill="#EDF2F4" opacity="0.9"/>
+  <circle cx="700" cy="150" r="14" fill="#FF6B4A" opacity="0.7"/>
+  <g fill="#EDF2F4" opacity="0.5">
+    <circle cx="120" cy="60" r="1.6"/>
+    <circle cx="200" cy="120" r="1.2"/>
+    <circle cx="330" cy="40" r="1.8"/>
+    <circle cx="420" cy="90" r="1.2"/>
+    <circle cx="60" cy="180" r="1.4"/>
+    <circle cx="500" cy="50" r="1.6"/>
+    <circle cx="580" cy="220" r="1.2"/>
+  </g>
+  <polygon points="0,340 90,280 180,330 260,260 340,310 430,250 520,320 610,270 700,330 800,290 800,500 0,500" fill="#1B2430"/>
+  <polygon points="0,380 110,330 220,370 320,310 420,360 540,300 650,370 800,340 800,500 0,500" fill="#151C25"/>
+  <path d="M280 500 L340 380 L370 420 L410 340 L440 400 L470 500 Z" fill="url(#glow1)"/>
+  <path d="M340 380 L370 420 L410 340" fill="none" stroke="#4CE0B3" stroke-width="2"/>
+</svg>
